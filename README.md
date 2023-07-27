@@ -101,3 +101,31 @@ Let's go through the code step by step:
 12. The program ends, and the DFA is successfully converted from the given NFA.
 
 In summary, this C++ code demonstrates how to convert an NFA to its equivalent DFA using the ε-closure concept to determine the transitions for the DFA states. The code efficiently handles the conversion process and provides a concise representation of the resulting DFA transitions.
+
+**Title: Context-Free Grammar String Acceptance**
+
+Description:
+This C++ program demonstrates how to check if a given string is accepted by a context-free grammar (CFG). A context-free grammar consists of a set of production rules, and this program defines a specific CFG to accept certain patterns of strings.
+
+The program takes an input string from the user and then processes it based on the defined CFG rules. The CFG rules in this program are as follows:
+
+The CFG symbol 'E' represents a valid expression.
+Any '0' or '1' in the input string is replaced with 'E', indicating a valid expression.
+The program handles parentheses '(' and ')', keeping track of their balance (matching pairs).
+The program allows two operations on expressions: '*' (star) and '+' (plus).
+Expressions enclosed within parentheses are recursively processed by the CFG.
+After processing the string, the program checks if the CFG successfully reduces the input to a valid expression following the defined rules. If the string is successfully reduced to a valid expression, it is considered accepted by the CFG; otherwise, it is considered not accepted.
+
+Here is a step-by-step explanation of the program logic:
+
+The program reads the input string from the user.
+It iterates through each character in the string.
+If the character is '0' or '1', it replaces it with 'E', indicating a valid expression.
+The program maintains a count of open parentheses encountered to balance them.
+When the program encounters an open parenthesis '(', it increments the bracket count and moves to the next character.
+If it encounters a closing parenthesis ')', it decrements the bracket count and replaces the ')' with 'E', indicating a valid expression.
+If the bracket count becomes negative at any point, it means there is an extra closing parenthesis without a corresponding opening parenthesis, and the string is not accepted.
+The program handles '*' and '+' operations on expressions and checks for their correctness according to CFG rules.
+If any discrepancy is found during processing, the flag is set to indicate that the string is not accepted.
+Finally, after processing the entire string, the program checks if there are any open brackets left. If so, the string is not accepted.
+Based on the above logic, the program determines whether the input string is accepted by the CFG or not and displays an appropriate message accordingly.
