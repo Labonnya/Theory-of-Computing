@@ -69,3 +69,35 @@ If the user enters the input string "11001," the program will display the DFA's 
 - State 2 for input 1 to 3
 
 Since the DFA ends in state 3, which is one of the specified final states, the program will output "ACCEPTED," indicating that the input string "11001" is accepted by the DFA.
+
+**Title: NFA to DFA Conversion: **
+
+The given C++ code is an implementation of the Nondeterministic Finite Automaton (NFA) to Deterministic Finite Automaton (DFA) conversion algorithm. The NFA is defined by specifying the transitions from one state to another on receiving input symbols '0' and '1'. The code takes user input to define the NFA and then converts it into its equivalent DFA.
+
+Let's go through the code step by step:
+
+1. The code starts by including the necessary C++ libraries for input-output operations (`iostream`) and vector manipulation (`vector`, `algorithm`).
+
+2. Various arrays and vectors are declared to store the NFA and DFA states and their transitions. The arrays `arr`, `arr0`, and `arr1` represent the NFA states and their transitions for input symbols '0' and '1', respectively. The vectors `crr` and `drr` are used to keep track of intermediate states during the DFA conversion process.
+
+3. The `concat0` and `concat1` functions are defined to compute the ε-closure for the DFA transitions. The ε-closure represents all the possible states that can be reached from a given state without consuming any input symbol. These functions help in computing the transitions for DFA states.
+
+4. The `main` function starts by taking user input for the number of nodes (states) in the NFA.
+
+5. It then takes input for each state of the NFA, including the current state, the state reached on input '0', and the state reached on input '1'. The NFA transitions are stored in the arrays `arr`, `arr0`, and `arr1`.
+
+6. The DFA conversion process begins by initializing the first state of the DFA with the start state of the NFA. The DFA states are stored in the arrays `brr`, `brr0`, and `brr1`.
+
+7. The `drr` vector is used to keep track of visited DFA states during the conversion process.
+
+8. The code then performs ε-closure computation for the initial state of the DFA using the `concat0` and `concat1` functions. The computed ε-closures are stored in the vectors `crr`.
+
+9. The code then enters a loop where it processes the ε-closures for each DFA state. It computes the transitions for '0' and '1' input symbols for each DFA state and stores them in the arrays `brr0` and `brr1`.
+
+10. The loop continues until all the DFA states and their transitions are computed.
+
+11. Finally, the code prints the resulting DFA states and their transitions in the format "State input0_transitions input1_transitions".
+
+12. The program ends, and the DFA is successfully converted from the given NFA.
+
+In summary, this C++ code demonstrates how to convert an NFA to its equivalent DFA using the ε-closure concept to determine the transitions for the DFA states. The code efficiently handles the conversion process and provides a concise representation of the resulting DFA transitions.
