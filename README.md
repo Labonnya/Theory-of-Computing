@@ -129,3 +129,20 @@ The program handles '*' and '+' operations on expressions and checks for their c
 If any discrepancy is found during processing, the flag is set to indicate that the string is not accepted.
 Finally, after processing the entire string, the program checks if there are any open brackets left. If so, the string is not accepted.
 Based on the above logic, the program determines whether the input string is accepted by the CFG or not and displays an appropriate message accordingly.
+
+**Title: Non-Deterministic Pushdown Automaton (NPDA) Implementation**
+
+Description:
+This code implements a Non-Deterministic Pushdown Automaton (NPDA) to check if a given string can be accepted by the NPDA. A Non-Deterministic Pushdown Automaton is a type of automaton that extends the capabilities of a Deterministic Pushdown Automaton (DPDA) by allowing multiple transitions for a given input symbol and state. It uses a stack to keep track of intermediate results during its computation.
+
+The NPDA is represented using three states: q0, q1, and qf. The stack of the NPDA is represented using a standard stack data structure, denoted by `pda_stack`. The character 'Z' represents the bottom of the stack.
+
+The main function reads a string input from the user and calls the `npda` function to check if the string can be accepted by the NPDA. The `npda` function uses a midpoint approach to divide the input string into two parts and simulates the NPDA's operations on each partition. If the NPDA successfully reaches the accepting state `qf` while processing both partitions, it returns true; otherwise, it returns false.
+
+The `push` and `pop` functions are helper functions used to simulate the push and pop operations of the NPDA. The push function handles transitions for pushing elements onto the stack based on the current state, input symbol, and top of the stack. Similarly, the pop function handles transitions for popping elements from the stack.
+
+The `clear_stack` function is used to clear the contents of the stack before processing a new input.
+
+Note: The code assumes that the input string consists of only two characters, 'a' and 'b'. The transitions and logic within the push and pop functions are designed based on this assumption.
+
+Overall, this code demonstrates a basic implementation of a Non-Deterministic Pushdown Automaton and how it can be used to check if a given string is accepted by the NPDA. However, for a practical NPDA implementation, the transitions and logic need to be defined based on the specific language being recognized by the automaton.
