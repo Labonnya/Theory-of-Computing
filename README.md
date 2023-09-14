@@ -1,6 +1,6 @@
 # Theory-of-Computing
 
-# Title: Deterministic Finite Automaton (DFA) for Accepting Strings with Specific Tuples
+# Deterministic Finite Automaton (DFA) for Accepting Strings with Specific Tuples
 
 Explanation:
 The given C++ code implements a Deterministic Finite Automaton (DFA) to determine whether a user-provided string of 0s and 1s is accepted or rejected based on a predefined set of tuples. The DFA defines states A, B, and C, and transitions between these states based on the input string's characters (0 or 1).
@@ -29,7 +29,7 @@ The DFA ends in state C, which means that the string "101010" is accepted as it 
 Note: The DFA presented in the code is specifically designed for the given set of tuples. Modifying the tuples or adding more states and transitions would create different DFA behaviors, allowing acceptance or rejection of different sets of strings.
 
 
-# Title: Deterministic Finite Automaton (DFA) Simulator
+# Deterministic Finite Automaton (DFA) Simulator
 
 Description:
 The C++ code provided is a program that simulates a Deterministic Finite Automaton (DFA) based on user-defined states and transitions. A DFA is a finite state machine that accepts or rejects input strings according to a predefined set of rules and transitions. In this implementation, the user is prompted to enter information about the DFA, including the number of states, the starting state, final states, and the transition table. The DFA then processes a given input string and determines whether the string is accepted or rejected based on the transitions defined.
@@ -70,7 +70,7 @@ If the user enters the input string "11001," the program will display the DFA's 
 
 Since the DFA ends in state 3, which is one of the specified final states, the program will output "ACCEPTED," indicating that the input string "11001" is accepted by the DFA.
 
-# Title: NFA to DFA Conversion: 
+# NFA to DFA Conversion: 
 
 The given C++ code is an implementation of the Nondeterministic Finite Automaton (NFA) to Deterministic Finite Automaton (DFA) conversion algorithm. The NFA is defined by specifying the transitions from one state to another on receiving input symbols '0' and '1'. The code takes user input to define the NFA and then converts it into its equivalent DFA.
 
@@ -102,7 +102,7 @@ Let's go through the code step by step:
 
 In summary, this C++ code demonstrates how to convert an NFA to its equivalent DFA using the ε-closure concept to determine the transitions for the DFA states. The code efficiently handles the conversion process and provides a concise representation of the resulting DFA transitions.
 
-# Title: Context-Free Grammar String Acceptance
+# Context-Free Grammar String Acceptance
 
 Description:
 This C++ program demonstrates how to check if a given string is accepted by a context-free grammar (CFG). A context-free grammar consists of a set of production rules, and this program defines a specific CFG to accept certain patterns of strings.
@@ -130,7 +130,7 @@ If any discrepancy is found during processing, the flag is set to indicate that 
 Finally, after processing the entire string, the program checks if there are any open brackets left. If so, the string is not accepted.
 Based on the above logic, the program determines whether the input string is accepted by the CFG or not and displays an appropriate message accordingly.
 
-# Title: Non-Deterministic Pushdown Automaton (NPDA) Implementation
+# Non-Deterministic Pushdown Automaton (NPDA) Implementation
 
 Description:
 This code implements a Non-Deterministic Pushdown Automaton (NPDA) to check if a given string can be accepted by the NPDA. A Non-Deterministic Pushdown Automaton is a type of automaton that extends the capabilities of a Deterministic Pushdown Automaton (DPDA) by allowing multiple transitions for a given input symbol and state. It uses a stack to keep track of intermediate results during its computation.
